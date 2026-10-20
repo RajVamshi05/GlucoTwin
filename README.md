@@ -84,8 +84,7 @@ See `docs/ARCHITECTURE.pdf`, `docs/GLUCOTWIN_PRESENTATION.pdf`, `docs/METHODOLOG
 7. **Prediction Log:** persistent audit, CSV export and opt-in retrospective ground truth.
 
 ### Team and submission
-Project/team name: **GlucoTwin**. Participant: **Vansh Deep Singh**. College: **Indian Institute of Information Technology Allahabad**, B.Tech ECE, 2023–2027 (participant-provided profile). No additional teammates, mentors or incubator affiliations are claimed. Participant must verify eligibility and affiliation wording before submission.
-
+Project/Team Name: GlucoTwin (Registered as Team MeowMeow). Participants: J K Raj Vamshi Thakur from the Indian Institute of Information Technology, Allahabad (B.Tech ECE, 2023–2027), and Swasti Mishra from IIT Dhanbad (ECE). No additional teammates, mentors, or incubator affiliations are claimed. Participants must verify eligibility and affiliation wording before submission.
 The repository is GitHub-compatible. This package does not claim a public repository or video link has been published. Follow `docs/SUBMISSION_CHECKLIST.md` for the remaining external publication steps. Keep the generated artifacts alongside code so judges can run the demo immediately.
 
 ### License and integrity
