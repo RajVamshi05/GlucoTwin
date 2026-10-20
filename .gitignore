@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+artifacts/events.sqlite*
+*.log
+video_build/
+docs/GLUCOTWIN_DEMO.mp4

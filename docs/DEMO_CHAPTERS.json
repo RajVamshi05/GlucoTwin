@@ -1,0 +1,115 @@
+{
+  "duration_seconds": 1433,
+  "chapters": [
+    {
+      "title": "Welcome to GlucoTwin",
+      "start_seconds": 0,
+      "duration_seconds": 67
+    },
+    {
+      "title": "The healthcare question",
+      "start_seconds": 67,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Historical patient context",
+      "start_seconds": 131,
+      "duration_seconds": 69
+    },
+    {
+      "title": "Synthetic population design",
+      "start_seconds": 200,
+      "duration_seconds": 68
+    },
+    {
+      "title": "A functioning replay engine",
+      "start_seconds": 268,
+      "duration_seconds": 62
+    },
+    {
+      "title": "Start, pause and resume",
+      "start_seconds": 330,
+      "duration_seconds": 62
+    },
+    {
+      "title": "Single-step state updates",
+      "start_seconds": 392,
+      "duration_seconds": 62
+    },
+    {
+      "title": "A longer trajectory",
+      "start_seconds": 454,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Inspect the digital twin state",
+      "start_seconds": 518,
+      "duration_seconds": 69
+    },
+    {
+      "title": "How features stay causal",
+      "start_seconds": 587,
+      "duration_seconds": 66
+    },
+    {
+      "title": "Interpreting model sensitivity",
+      "start_seconds": 653,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Scenario: recent glucose trajectory",
+      "start_seconds": 717,
+      "duration_seconds": 62
+    },
+    {
+      "title": "Scenario: a meal annotation",
+      "start_seconds": 779,
+      "duration_seconds": 61
+    },
+    {
+      "title": "Scenario: recent activity",
+      "start_seconds": 840,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Scenario: missing sensor interval",
+      "start_seconds": 904,
+      "duration_seconds": 61
+    },
+    {
+      "title": "Scenario: patient context",
+      "start_seconds": 965,
+      "duration_seconds": 71
+    },
+    {
+      "title": "Patient-separated model evaluation",
+      "start_seconds": 1036,
+      "duration_seconds": 65
+    },
+    {
+      "title": "False positives and early warning",
+      "start_seconds": 1101,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Calibration and honest comparison",
+      "start_seconds": 1165,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Global importance and limitations",
+      "start_seconds": 1229,
+      "duration_seconds": 72
+    },
+    {
+      "title": "Audit trail and retrospective inspection",
+      "start_seconds": 1301,
+      "duration_seconds": 64
+    },
+    {
+      "title": "Reproduce and submit responsibly",
+      "start_seconds": 1365,
+      "duration_seconds": 68
+    }
+  ]
+}

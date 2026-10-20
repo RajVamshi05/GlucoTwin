@@ -1,0 +1,161 @@
+patient_id,age,sex,diabetes_status,diabetes_duration_years,hba1c_pct,historical_fasting_glucose,baseline_glucose,baseline_glucose_sd,diagnoses,medication_category,history_note
+PT-0001,47,Female,Simulated type 2 diabetes,2,6.38,107.9,110.2,18.96,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0002,77,Male,Simulated type 2 diabetes,13,8.26,142.0,147.02,15.33,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0003,42,Female,Simulated type 2 diabetes,12,7.24,130.3,137.52,14.83,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0004,33,Male,Simulated type 2 diabetes,9,6.39,109.4,116.08,19.78,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0005,51,Female,Simulated type 2 diabetes,17,7.31,152.9,155.81,19.98,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0006,51,Female,Simulated type 2 diabetes,5,7.5,145.7,146.59,15.02,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0007,68,Female,Simulated type 2 diabetes,1,7.06,122.3,122.73,17.17,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0008,70,Female,Simulated type 2 diabetes,3,8.0,154.9,146.79,13.06,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0009,58,Female,Simulated type 2 diabetes,11,6.87,147.2,133.09,17.38,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0010,51,Female,Simulated type 2 diabetes,7,7.64,143.0,139.35,14.38,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0011,35,Female,Simulated type 2 diabetes,15,6.18,103.3,100.1,17.26,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0012,62,Female,Simulated type 2 diabetes,7,7.25,139.1,134.74,18.92,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0013,32,Female,Simulated type 2 diabetes,21,5.68,97.5,100.98,17.79,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0014,36,Male,Simulated type 2 diabetes,20,7.01,132.3,138.34,17.62,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0015,66,Female,Simulated type 2 diabetes,15,6.43,139.4,122.19,14.17,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0016,72,Female,Simulated type 2 diabetes,12,6.92,133.8,143.66,17.8,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0017,33,Male,Simulated type 2 diabetes,8,8.33,164.9,155.74,18.23,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0018,52,Female,Simulated type 2 diabetes,8,7.67,141.5,127.49,16.13,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0019,65,Female,Simulated type 2 diabetes,21,7.94,144.4,140.57,16.71,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0020,30,Male,Simulated type 2 diabetes,17,6.74,110.7,121.13,18.48,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0021,74,Male,Simulated type 2 diabetes,17,7.66,148.7,149.54,12.21,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0022,62,Male,Simulated type 2 diabetes,20,6.57,95.4,105.27,10.1,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0023,43,Female,Simulated type 2 diabetes,5,7.02,118.1,117.16,10.43,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0024,70,Male,Simulated type 2 diabetes,5,7.46,148.2,142.35,14.15,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0025,48,Female,Simulated type 2 diabetes,1,7.14,137.5,145.12,9.66,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0026,60,Male,Simulated type 2 diabetes,10,7.95,133.1,133.95,14.88,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0027,42,Female,Simulated type 2 diabetes,13,7.02,163.1,150.84,18.14,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0028,50,Female,Simulated type 2 diabetes,19,6.93,132.0,134.55,9.92,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0029,75,Female,Simulated type 2 diabetes,4,6.95,118.9,114.51,11.29,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0030,61,Female,Simulated type 2 diabetes,9,5.85,106.6,104.93,18.39,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0031,59,Female,Simulated type 2 diabetes,21,6.55,116.6,125.11,18.17,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0032,66,Female,Simulated type 2 diabetes,18,6.55,144.4,128.92,16.81,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0033,42,Male,Simulated type 2 diabetes,4,7.45,145.8,151.65,13.75,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0034,70,Male,Simulated type 2 diabetes,10,6.43,129.9,118.64,9.99,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0035,63,Male,Simulated type 2 diabetes,19,7.11,110.4,120.51,15.01,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0036,54,Female,Simulated type 2 diabetes,7,7.61,154.1,149.57,16.44,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0037,53,Male,Simulated type 2 diabetes,3,6.23,109.3,113.37,16.06,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0038,71,Female,Simulated type 2 diabetes,7,6.98,123.4,118.12,16.77,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0039,39,Female,Simulated type 2 diabetes,17,6.35,128.2,130.31,19.21,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0040,49,Male,Simulated type 2 diabetes,8,7.72,160.6,148.75,14.22,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0041,78,Female,Simulated type 2 diabetes,6,8.38,148.3,156.91,17.81,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0042,44,Female,Simulated type 2 diabetes,16,6.44,127.0,117.49,14.62,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0043,51,Male,Simulated type 2 diabetes,18,6.24,135.2,133.29,18.02,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0044,57,Male,Simulated type 2 diabetes,15,7.35,152.4,149.45,16.29,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0045,57,Male,Simulated type 2 diabetes,8,6.71,139.3,128.5,13.18,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0046,67,Male,Simulated type 2 diabetes,15,6.64,138.9,120.18,10.44,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0047,33,Male,Simulated type 2 diabetes,12,5.99,126.3,111.93,12.5,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0048,60,Male,Simulated type 2 diabetes,11,5.92,99.9,103.86,12.63,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0049,66,Male,Simulated type 2 diabetes,8,7.58,139.5,136.54,17.05,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0050,62,Male,Simulated type 2 diabetes,21,5.85,116.6,109.66,19.94,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0051,58,Female,Simulated type 2 diabetes,21,6.95,127.1,140.94,9.11,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0052,58,Female,Simulated type 2 diabetes,12,7.16,136.4,146.21,18.4,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0053,72,Male,Simulated type 2 diabetes,15,6.57,119.6,118.99,14.9,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0054,40,Male,Simulated type 2 diabetes,15,6.58,109.1,107.48,10.47,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0055,71,Female,Simulated type 2 diabetes,9,6.02,107.3,110.1,9.73,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0056,31,Male,Simulated type 2 diabetes,12,7.45,116.7,120.58,9.94,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0057,56,Female,Simulated type 2 diabetes,21,7.48,145.2,152.34,10.4,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0058,61,Male,Simulated type 2 diabetes,18,7.35,131.1,140.53,13.58,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0059,57,Male,Simulated type 2 diabetes,13,7.03,152.0,154.86,11.47,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0060,76,Female,Simulated type 2 diabetes,19,7.39,139.8,131.48,10.86,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0061,53,Female,Simulated type 2 diabetes,13,7.03,118.5,124.0,17.33,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0062,54,Female,Simulated type 2 diabetes,3,6.6,117.2,124.03,15.59,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0063,46,Female,Simulated type 2 diabetes,1,5.86,106.1,112.97,12.96,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0064,73,Female,Simulated type 2 diabetes,8,6.48,104.9,117.68,13.76,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0065,63,Male,Simulated type 2 diabetes,16,5.8,120.7,117.13,19.66,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0066,36,Female,Simulated type 2 diabetes,9,6.03,109.0,103.83,19.46,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0067,69,Male,Simulated type 2 diabetes,7,6.53,120.4,126.26,19.46,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0068,30,Male,Simulated type 2 diabetes,6,6.31,125.1,119.52,12.73,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0069,32,Female,Simulated type 2 diabetes,19,6.83,142.8,140.79,12.96,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0070,46,Male,Simulated type 2 diabetes,10,7.03,155.4,155.88,19.41,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0071,36,Female,Simulated type 2 diabetes,7,6.12,107.5,102.28,9.3,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0072,77,Female,Simulated type 2 diabetes,14,7.64,141.4,143.42,9.18,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0073,43,Female,Simulated type 2 diabetes,3,6.8,119.4,123.73,12.96,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0074,65,Male,Simulated type 2 diabetes,6,7.57,155.2,152.17,9.62,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0075,45,Male,Simulated type 2 diabetes,1,6.59,114.4,120.8,13.0,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0076,77,Female,Simulated type 2 diabetes,17,5.89,110.6,111.1,15.85,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0077,52,Female,Simulated type 2 diabetes,16,6.74,123.3,122.67,13.04,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0078,43,Male,Simulated type 2 diabetes,1,7.36,150.2,142.42,16.91,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0079,52,Male,Simulated type 2 diabetes,16,5.5,99.3,106.17,9.63,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0080,41,Female,Simulated type 2 diabetes,1,6.81,143.3,136.78,13.85,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0081,57,Female,Simulated type 2 diabetes,9,6.15,114.3,117.07,10.94,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0082,59,Female,Simulated type 2 diabetes,18,6.02,88.9,100.52,17.47,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0083,65,Male,Simulated type 2 diabetes,13,6.36,122.6,117.51,9.99,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0084,72,Male,Simulated type 2 diabetes,6,5.98,118.9,111.41,10.23,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0085,71,Female,Simulated type 2 diabetes,7,6.45,139.7,135.14,19.41,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0086,53,Female,Simulated type 2 diabetes,1,7.33,155.8,145.12,11.18,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0087,58,Female,Simulated type 2 diabetes,6,6.27,101.7,108.99,13.13,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0088,30,Female,Simulated type 2 diabetes,16,5.5,100.1,104.9,9.54,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0089,51,Male,Simulated type 2 diabetes,19,5.65,97.6,100.62,11.95,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0090,49,Female,Simulated type 2 diabetes,10,7.81,169.6,154.97,14.95,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0091,62,Female,Simulated type 2 diabetes,12,6.85,120.9,126.28,11.81,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0092,31,Female,Simulated type 2 diabetes,16,7.49,145.8,155.78,17.09,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0093,56,Male,Simulated type 2 diabetes,14,6.78,139.8,134.8,17.4,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0094,44,Male,Simulated type 2 diabetes,3,7.15,146.0,147.06,14.17,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0095,53,Female,Simulated type 2 diabetes,4,6.7,144.4,135.87,12.65,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0096,77,Female,Simulated type 2 diabetes,16,7.53,157.2,153.87,17.95,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0097,37,Female,Simulated type 2 diabetes,13,6.26,127.5,106.08,19.28,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0098,56,Male,Simulated type 2 diabetes,8,7.34,140.9,138.4,11.52,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0099,57,Female,Simulated type 2 diabetes,20,6.67,107.4,123.6,14.0,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0100,76,Male,Simulated type 2 diabetes,19,6.14,118.5,110.95,13.15,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0101,33,Female,Simulated type 2 diabetes,10,7.87,152.9,156.18,13.43,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0102,54,Male,Simulated type 2 diabetes,20,6.83,125.3,140.99,18.53,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0103,34,Male,Simulated type 2 diabetes,10,6.04,140.5,124.91,14.42,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0104,57,Male,Simulated type 2 diabetes,15,7.69,153.6,151.93,9.63,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0105,37,Male,Simulated type 2 diabetes,6,6.45,128.9,123.11,10.48,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0106,60,Male,Simulated type 2 diabetes,1,6.31,116.2,113.4,9.34,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0107,51,Male,Simulated type 2 diabetes,20,7.74,155.8,149.49,18.32,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0108,55,Male,Simulated type 2 diabetes,20,6.2,127.7,118.74,11.84,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0109,62,Female,Simulated type 2 diabetes,13,6.52,110.7,107.48,17.72,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0110,61,Female,Simulated type 2 diabetes,13,6.09,108.6,106.25,15.85,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0111,48,Female,Simulated type 2 diabetes,1,7.12,142.2,141.26,16.23,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0112,63,Male,Simulated type 2 diabetes,2,6.82,112.4,111.05,17.91,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0113,73,Male,Simulated type 2 diabetes,2,6.32,121.3,115.08,9.86,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0114,59,Male,Simulated type 2 diabetes,1,7.68,158.2,152.93,12.0,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0115,31,Male,Simulated type 2 diabetes,7,5.5,91.4,104.76,17.8,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0116,39,Male,Simulated type 2 diabetes,10,6.62,108.0,113.05,17.66,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0117,38,Female,Simulated type 2 diabetes,7,7.41,132.7,134.18,19.7,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0118,45,Female,Simulated type 2 diabetes,21,5.99,104.6,103.66,10.39,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0119,34,Female,Simulated type 2 diabetes,21,6.89,148.6,132.72,12.77,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0120,53,Female,Simulated type 2 diabetes,15,5.94,108.5,103.67,10.98,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0121,59,Female,Simulated type 2 diabetes,19,7.6,158.9,141.08,18.32,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0122,38,Male,Simulated type 2 diabetes,15,5.5,104.8,106.39,18.63,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0123,56,Male,Simulated type 2 diabetes,2,6.71,126.7,117.49,9.01,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0124,60,Male,Simulated type 2 diabetes,16,6.67,102.2,107.81,19.79,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0125,44,Male,Simulated type 2 diabetes,1,7.89,165.0,154.78,14.62,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0126,53,Male,Simulated type 2 diabetes,20,6.36,102.4,102.06,12.45,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0127,67,Female,Simulated type 2 diabetes,17,6.12,112.1,112.03,13.54,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0128,46,Male,Simulated type 2 diabetes,4,7.09,113.6,131.72,15.64,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0129,52,Female,Simulated type 2 diabetes,16,7.21,139.3,133.35,14.86,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0130,60,Female,Simulated type 2 diabetes,12,5.68,107.6,102.39,13.9,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0131,74,Male,Simulated type 2 diabetes,14,7.01,122.1,125.44,17.33,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0132,61,Female,Simulated type 2 diabetes,19,6.0,126.0,120.5,15.93,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0133,60,Female,Simulated type 2 diabetes,1,6.09,114.5,114.96,10.63,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0134,64,Male,Simulated type 2 diabetes,1,7.24,130.9,128.07,9.02,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0135,36,Male,Simulated type 2 diabetes,5,6.69,121.7,127.14,11.3,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0136,59,Male,Simulated type 2 diabetes,6,5.89,98.2,104.57,10.9,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0137,61,Male,Simulated type 2 diabetes,15,7.65,161.4,156.42,11.24,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0138,65,Male,Simulated type 2 diabetes,18,6.44,117.9,113.8,13.05,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0139,52,Male,Simulated type 2 diabetes,2,5.5,107.5,101.52,14.12,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0140,50,Male,Simulated type 2 diabetes,19,6.87,137.7,137.62,10.44,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0141,72,Female,Simulated type 2 diabetes,8,7.61,144.9,145.01,13.03,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0142,31,Female,Simulated type 2 diabetes,4,6.28,111.9,122.26,14.02,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0143,46,Female,Simulated type 2 diabetes,3,5.92,93.6,101.74,10.17,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0144,47,Female,Simulated type 2 diabetes,17,6.45,108.6,115.56,19.18,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0145,72,Male,Simulated type 2 diabetes,2,6.79,122.6,122.02,12.12,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0146,45,Female,Simulated type 2 diabetes,17,5.93,126.5,120.48,15.81,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0147,67,Male,Simulated type 2 diabetes,1,6.32,118.0,121.98,18.92,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0148,43,Female,Simulated type 2 diabetes,21,7.25,132.3,129.03,18.27,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0149,61,Male,Simulated type 2 diabetes,16,7.44,126.4,129.08,16.96,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0150,71,Male,Simulated type 2 diabetes,12,6.51,129.9,126.9,15.83,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0151,48,Male,Simulated type 2 diabetes,2,6.4,123.3,112.91,14.38,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0152,52,Male,Simulated type 2 diabetes,6,6.96,133.6,134.03,17.24,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0153,68,Female,Simulated type 2 diabetes,12,6.79,112.3,120.39,17.87,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0154,53,Male,Simulated type 2 diabetes,5,6.46,112.9,115.97,18.79,Type 2 diabetes,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0155,77,Male,Simulated type 2 diabetes,8,6.06,109.1,115.39,14.46,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0156,60,Male,Simulated type 2 diabetes,12,6.48,130.1,114.78,17.97,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0157,58,Female,Simulated type 2 diabetes,13,6.35,114.7,124.6,13.66,Type 2 diabetes,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0158,56,Male,Simulated type 2 diabetes,21,7.35,141.3,143.15,17.27,Type 2 diabetes; hypertension,Synthetic oral-agent category,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0159,61,Male,Simulated type 2 diabetes,12,7.88,155.1,154.83,18.49,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.
+PT-0160,58,Female,Simulated type 2 diabetes,5,7.14,138.3,141.14,9.18,Type 2 diabetes; hypertension,None recorded,Entirely synthetic. Baseline predates replay. Medication has no modeled effect.

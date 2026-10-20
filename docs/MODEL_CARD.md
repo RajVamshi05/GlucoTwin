@@ -1,0 +1,18 @@
+# Model card
+- Version: gt-1.0-3eba6daf. Artifact: artifacts/model.joblib.
+- Purpose: synthetic prototype of a patient-conditioned glucose event classifier.
+- Intended users: competition judges and researchers exploring architecture.
+- Not intended: real clinical care, diagnosis, medication adjustment, emergency monitoring or causal recommendations.
+- Algorithm: scikit-learn histogram gradient boosting plus held-out sigmoid calibration.
+- Data: generated locally, seed 2026, 160 fictional patients, seven days each.
+- Inputs: 22 historical, sensor and personal deviation features; see data dictionary.
+- Output: synthetic event probability estimate over 120 minutes; alert cutoff 0.5.
+- Evaluation: disjoint patients, actual metrics in metrics.json and README.
+- Benefits established: runnable pipeline and prediction of simulator-defined patterns.
+- Benefits NOT established: clinical validity, prevention, improved health outcomes, superiority of personalization, benefit of calibration.
+- Risks: simulator artifacts, limited diversity, correlated windows, prevalence shift, out-of-distribution scenarios, unreliable causal interpretation.
+- Explanations: non-additive local median-replacement sensitivity, validation permutation importance.
+- Missingness: short forward fill with explicit missingness/staleness; stale inputs withheld.
+- Uncertainty: no validated confidence or prediction intervals.
+- Maintenance: retrain when event configuration changes; validate changes on new independent experiments. Do not tune to this test set.
+- Security: local single-user app; no authentication; never load untrusted joblib files.

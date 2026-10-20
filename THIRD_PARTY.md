@@ -1,0 +1,2 @@
+# Third-party notices
+Project MIT licensing does not relicense dependencies. See installed package distributions for authoritative license text. Direct dependencies: NumPy, pandas, SciPy and scikit-learn (BSD-family licenses); joblib (BSD); Streamlit (Apache-2.0); Plotly.py (MIT); pytest (MIT); ReportLab (BSD); python-pptx (MIT). Transitive dependencies retain their respective terms. No third-party patient dataset or pretrained clinical model is included.
