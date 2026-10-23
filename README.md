@@ -367,11 +367,9 @@ The application runs locally after dependencies have been installed. No API keys
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_PUBLIC_GITHUB_REPOSITORY_URL
-cd YOUR_REPOSITORY_NAME
+git clone https://github.com/RajVamshi05/GlucoTwin.git
+cd GlucoTwin
 ```
-
-Replace the placeholders with the actual public repository URL and directory name.
 
 ### 2. Create and activate a virtual environment
 
@@ -471,8 +469,6 @@ Optional screenshot and video-production tools are not required to run the appli
 └── THIRD_PARTY.md
 ```
 
-The exact file layout may contain additional implementation and testing files. Keep the generated artifacts alongside the source code so reviewers can inspect the supplied experiment immediately.
-
 ##  Team and Affiliation
 
 **Project name:** GlucoTwin  
@@ -481,9 +477,7 @@ The exact file layout may contain additional implementation and testing files. K
 | Participant | Institution | Academic program |
 |---|---|---|
 | J K Raj Vamshi Thakur | Indian Institute of Information Technology, Allahabad | B.Tech, Electronics and Communication Engineering, 2023–2027 |
-| Swasti Mishra | IIT (ISM) Dhanbad | B.Tech, Electronics and Communication Engineering, 2027 |
-
-No additional teammates, mentors, or incubator affiliations are claimed here. Please verify the official team registration and institutional wording before submission.
+| Swasti Mishra | IIT (ISM) Dhanbad | B.Tech, Electronics and Communication Engineering, 2023-2027 |
 
 ##  License and Third-Party Components
 
