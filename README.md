@@ -1,94 +1,504 @@
-# GlucoTwin
-## A Personalized, Continuously Updating Digital Twin for Early Prediction of Glucose Excursions
-**From Reactive Glucose Monitoring to Personalized Predictive Health.**
+# GlucoTwin 🩺
+### A Continuously Updating, Patient-Conditioned Digital Twin for Glucose Event Prediction
 
-Research proof-of-concept for the participant-described Happiest Health Digital Twin Challenge 2026. **All patients and sensors are synthetic. No clinical validation, diagnosis, treatment recommendations, or demonstrated clinical benefit.** Competition requirements and dates come from the participant brief, not independently verified rules.
+**From reactive glucose monitoring to predictive, data-driven health research.**
 
-### Run locally (Python 3.11 or 3.12)
+GlucoTwin is a research prototype that combines historical patient context with an evolving stream of continuous glucose monitoring (CGM) observations to estimate the probability of a defined glucose event within the next two hours.
+
+Rather than presenting a static risk score, GlucoTwin maintains a timestamped patient state, updates its features as new observations arrive, evaluates a trained machine-learning model, exposes model sensitivity, handles missing sensor data, and records predictions in a persistent audit log.
+
+The project brings together a complete experimental pipeline: synthetic patient generation, causal temporal feature engineering, patient-level evaluation, model calibration, scenario analysis, interactive replay, and reproducible reporting.
+
+> **Research disclaimer:** All patients, profiles, sensor readings, laboratory values, and events are synthetic. GlucoTwin is not a medical device and has not been clinically validated. It does not diagnose, prescribe treatment, or demonstrate improved clinical outcomes.
+
+---
+
+##  Explore GlucoTwin
+
+| Resource | Description |
+|---|---|
+|  **Demo video** | [Watch the narrated application walkthrough](YOUTUBE_UNLISTED_VIDEO_URL) |
+|  **Architecture** | [Architecture diagram (PDF)](docs/ARCHITECTURE.pdf) |
+|  **Presentation** | [Project presentation (PDF)](docs/GLUCOTWIN_PRESENTATION.pdf) |
+|  **Methodology** | [Experimental methodology](docs/METHODOLOGY.md) |
+|  **Data dictionary** | [Features and data definitions](docs/DATA_DICTIONARY.md) |
+|  **Model card** | [Model details, intended use, and limitations](docs/MODEL_CARD.md) |
+|  **Demo script** | [Complete narration script](docs/DEMO_SCRIPT.md) |
+|  **Submission checklist** | [Repository and submission checklist](docs/SUBMISSION_CHECKLIST.md) |
+
+**Project:** GlucoTwin  
+**Team:** Team MeowMeow  
+**Challenge:** Happiest Health Digital Twin Challenge 2026
+
+---
+
+##  Application Showcase
+
+All screenshots are captured from the GlucoTwin application. All patient data and sensor observations are synthetic.
+
+### 01. Executive Overview
+
+![GlucoTwin Executive Overview](docs/demo_frames/overview.png)
+
+The main dashboard summarizes the latest synthetic glucose observation, estimated event probability, simulation timestamp, and data-quality status.
+
+### 02. Patient Profile
+
+![GlucoTwin Patient Profile](docs/demo_frames/profile.png)
+
+Each synthetic patient has a persistent identifier connecting historical patient characteristics to a separate sensor timeline.
+
+### 03. Live Digital Twin
+
+![GlucoTwin Live Digital Twin](docs/demo_frames/live_running.png)
+
+The live replay updates the observed glucose trace and prediction as simulated sensor observations arrive. Start/Resume, Pause, Step, Advance, and Reset support controlled inspection of the evolving state.
+
+### 04. Feature Engineering and State Inspection
+
+![GlucoTwin Engineered Features](docs/demo_frames/features.png)
+
+The feature pipeline combines recent glucose statistics, temporal trends, activity observations, meal timing, and historical context. Features are constructed using only information available at the prediction timestamp.
+
+### 05. Explainability and Model Sensitivity
+
+![GlucoTwin Explainability](docs/demo_frames/explain.png)
+
+Local sensitivity analysis examines how replacing individual features with their training-set medians changes the model estimate. These results are model probes, not causal explanations or SHAP values.
+
+### 06. Scenario Simulator
+
+![GlucoTwin Glucose Scenario](docs/demo_frames/scenario_glucose.png)
+
+Scenario analysis modifies a copy of the observed input history, rebuilds the engineered features, and compares model estimates without altering the original replay state.
+
+### 07. Model Performance and Evaluation
+
+![GlucoTwin Model Performance](docs/demo_frames/performance.png)
+
+The evaluation dashboard presents held-out synthetic test metrics and model comparisons. The results demonstrate performance on the generated dataset only, not clinical validity.
+
+### Additional application captures
+
+<details>
+<summary>Explore more screenshots</summary>
+
+**Live replay — initial state**
+
+![Initial replay](docs/demo_frames/live_initial.png)
+
+**Live replay — single-step update**
+
+![Single-step replay](docs/demo_frames/live_step.png)
+
+**Live replay — meal annotation**
+
+![Meal replay](docs/demo_frames/live_meal.png)
+
+**Prediction log**
+
+![Prediction log](docs/demo_frames/log.png)
+
+**Model calibration**
+
+![Calibration](docs/demo_frames/calibration.png)
+
+**Feature importance**
+
+![Feature importance](docs/demo_frames/importance.png)
+
+**Scenario — meal**
+
+![Meal scenario](docs/demo_frames/scenario_meal.png)
+
+**Scenario — activity**
+
+![Activity scenario](docs/demo_frames/scenario_activity.png)
+
+**Scenario — missing sensor data**
+
+![Missing-data scenario](docs/demo_frames/scenario_missing.png)
+
+**Scenario — historical patient profile**
+
+![Patient profile scenario](docs/demo_frames/scenario_profile.png)
+
+**Retrospective inspection**
+
+![Retrospective view](docs/demo_frames/retrospective.png)
+
+**Internal state inspector**
+
+![State inspector](docs/demo_frames/state.png)
+
+</details>
+
+
+---
+
+##  Problem Statement
+
+Historical patient records and continuously changing sensor observations describe different aspects of a patient's state.
+
+Historical measurements provide baseline context, while recent sensor observations describe the evolving trajectory. A predictive system must combine these information sources without using measurements that would not yet have been available at prediction time.
+
+GlucoTwin investigates this problem through a reproducible synthetic experiment.
+
+At each prediction timestamp, the model estimates whether a defined glucose threshold event will occur during the following two hours. The application then exposes the estimate, the features used, the data-quality state, and a record of the prediction.
+
+The goal is to demonstrate a functioning, inspectable digital-twin architecture—not to claim clinical efficacy.
+
+##  Healthcare Use Case
+
+**Research use case:** Patient-conditioned monitoring and early prediction of synthetic glucose excursions.
+
+The system explores how historical baseline information, recent glucose dynamics, activity observations, meal timing, and data quality can be incorporated into a continuously updated prediction workflow.
+
+The prediction target is:
+
+> At prediction time \(t\), determine whether any available simulated CGM reading exceeds 180 mg/dL at one of the future five-minute timestamps from \(t+5\) through \(t+120\) minutes.
+
+The current reading is excluded from the future-event label. However, a patient may already be above the threshold at prediction time, so the main task includes persistent elevations as well as newly developing excursions.
+
+A separate evaluation subset considers prediction timestamps at which the current glucose is at or below the threshold.
+
+GlucoTwin does **not** provide a clinical diagnosis, treatment recommendation, personalized medication advice, or validated physiological intervention simulation.
+
+##  Key Features
+
+- **Persistent synthetic patient identities:** Connect historical profiles to individual sensor timelines.
+- **Continuously updating state:** Maintain the current replay position, latest observation, engineered features, estimate, and prediction history.
+- **Causal temporal features:** Construct rolling statistics and normalization using only information available at the prediction timestamp.
+- **Shared training and inference pipeline:** Use the same feature-building function during training and application inference.
+- **Patient-level data isolation:** Keep training, validation, calibration, and test patients disjoint.
+- **Interactive sensor replay:** Advance through five-minute observations or skip one simulated hour.
+- **Model sensitivity:** Inspect how changing individual feature values affects model output.
+- **Scenario experiments:** Explore controlled changes to copied input histories without altering the original state.
+- **Missing-data safeguards:** Withhold estimates when configured sensor-quality requirements are not satisfied.
+- **Persistent audit logging:** Store issued predictions in SQLite and support CSV export.
+- **Retrospective inspection:** Reveal the complete synthetic timeline only through an explicitly labeled retrospective view.
+- **Reproducible evaluation:** Retain model metrics, test predictions, partition information, and automated tests.
+
+##  Technical Architecture
+
+```text
+Historical Synthetic Patient Profiles
+                |
+                v
+      Patient Context Loader
+                |
+                +----------------------+
+                |                      |
+                v                      v
+      Historical Baseline       Synthetic CGM Stream
+                                       |
+                                       v
+                              Timestamped Replay
+                                       |
+                                       v
+                              Data-Quality Gate
+                                       |
+                                       v
+                           Causal Feature Builder
+                           (22 model input columns)
+                                       |
+                                       v
+                          Trained Event Classifier
+                                       |
+                                       v
+                         Probability + Review State
+                                       |
+                     +-----------------+----------------+
+                     |                 |                |
+                     v                 v                v
+                Dashboard         Sensitivity       SQLite Audit
+                                  & Scenarios       + CSV Export
+                     |
+                     v
+              Evaluation & Retrospective Review
+```
+
+### Core components
+
+| Component | Responsibility |
+|---|---|
+| `app.py` | Streamlit interface and dashboard navigation |
+| `glucotwin/data.py` | Seeded synthetic patient and sensor generation |
+| `glucotwin/features.py` | Causal feature engineering and target construction |
+| `glucotwin/train.py` | Patient partitions, training, calibration, evaluation, and artifact export |
+| `glucotwin/twin.py` | Replay state, model inference, and SQLite audit logging |
+| `artifacts/model.joblib` | Trained estimator, calibration components, and prediction configuration |
+| `artifacts/metrics.json` | Evaluation metrics and partition manifest |
+| `artifacts/test_predictions.csv` | Held-out test predictions and outcomes |
+| `tests/` | Temporal isolation, labels, state management, and integration tests |
+
+The implementation is a **data-driven monitoring twin**, not a mechanistic physiological twin. It uses a shared population model conditioned on historical patient features rather than fitting an individualized physiological model for each patient.
+
+##  AI/ML Model and Frameworks
+
+**Primary model:** Scikit-learn histogram gradient boosting classifier.
+
+The trained pipeline includes the estimator, calibration components, and configuration required to reproduce the prediction task.
+
+| Component | Implementation |
+|---|---|
+| Event prediction | Histogram gradient boosting classifier |
+| Baseline comparator | Glucose level plus positive trend rule |
+| Personalization ablation | Dynamic-only classifier without historical/personalized features |
+| Probability calibration | Sigmoid calibration using a separate patient partition |
+| Explainability | Local median-replacement sensitivity analysis |
+| Global feature importance | Permutation importance on validation data |
+| Data processing | Python, NumPy, Pandas |
+| Application | Streamlit |
+| Persistent audit | SQLite |
+| Automated testing | pytest |
+
+### Feature groups
+
+The model receives an enumerated vector of 22 features derived from:
+
+- Current glucose and recent glucose statistics.
+- Short-term glucose slope and variability.
+- Recent activity and heart-rate observations.
+- Meal timing.
+- Historical patient characteristics and baseline-normalized values.
+- Missingness indicators and elapsed time since the last actual glucose observation.
+
+Future glucose, target labels, patient identifiers as predictive inputs, and hidden simulator response parameters are excluded from the estimator input.
+
+Short glucose gaps may be forward-filled for up to three five-minute intervals. The pipeline does not backward-fill from future observations. A data-quality gate can withhold inference when configured missingness limits are exceeded.
+
+##  Experimental Results
+
+### Held-out synthetic test performance
+
+The experiment uses 160 synthetic patients split by patient identity, not randomly mixed overlapping windows.
+
+| Metric | Fused EHR + Sensor | Glucose + Trend Rule | Dynamic-Only Ablation |
+|---|---:|---:|---:|
+| Precision | 0.8727 | 0.7232 | 0.8831 |
+| Recall | 0.8188 | 0.5540 | 0.8138 |
+| F1 score | 0.8449 | 0.6274 | 0.8470 |
+| Average precision | 0.9498 | 0.5621 | 0.9508 |
+| Brier score | 0.0695 | 0.2383 | 0.0693 |
+
+**Evaluation configuration**
+
+- Training: 88 patients.
+- Validation: 24 patients.
+- Calibration: 24 patients.
+- Final test: 24 patients.
+- Held-out evaluation windows: 11,567.
+- Test event prevalence: 36.21%.
+
+### Confusion matrix: fused model
+
+| Actual / Predicted | Negative | Positive |
+|---|---:|---:|
+| Negative | 6,879 | 500 |
+| Positive | 759 | 3,429 |
+
+The false-positive rate is approximately 6.78%. The 500 false-positive windows are not 500 independent alert episodes: overlapping windows can describe the same evolving event. Episode deduplication and alert cooldown analysis have not been implemented.
+
+### Early-warning subset
+
+For the 9,696 test windows where current glucose is at or below the event threshold:
+
+- F1 score: 0.7447.
+- Recall: 0.7000.
+- Average precision: 0.8678.
+
+This subset is more directly relevant to detecting excursions before the current observation crosses the threshold. Its performance is lower than the overall result and should be interpreted separately.
+
+### Important findings
+
+**1. The fused model outperforms the simple rule baseline.**  
+Its held-out F1 score is approximately 0.845, compared with 0.627 for the glucose-plus-positive-trend rule.
+
+**2. Personalization has not demonstrated an improvement in this experiment.**  
+The dynamic-only ablation achieved an F1 score of approximately 0.847, slightly above the fused model's 0.845. Adding historical context does not automatically improve performance.
+
+**3. Calibration did not improve the test Brier score.**  
+The raw Brier score was approximately 0.06867, compared with 0.06952 after calibration. Lower is better. Brier score reflects both calibration and other aspects of probabilistic prediction.
+
+**4. Synthetic performance is not clinical validation.**  
+The model may exploit the simulator's programmed meal schedules, baseline differences, and response equations. The reported results do not establish performance on real patients or real CGM devices.
+
+All results are generated by the experiment and stored in `artifacts/metrics.json`. No claim of statistical significance or clinical superiority is made.
+
+## 🔬 Data Generation and Scientific Integrity
+
+The bundled experiment contains 160 fictional patients, each with seven days of five-minute sensor observations.
+
+The simulator introduces patient-specific baselines, varying meal-response strengths, jittered meal times, delayed glucose-response kernels, activity patterns, circadian variation, prior completed sleep, autocorrelated noise, heart-rate variation, random missing observations, and a contiguous sensor gap for each patient.
+
+These are explicit generator assumptions, not discoveries about human physiology.
+
+The historical baseline is constructed before the sensor stream. Features use only past and current observations. Training and evaluation are partitioned by patient identity to avoid distributing overlapping windows from the same patient across the different partitions.
+
+The automated temporal-isolation test replaces later sensor values and verifies that earlier feature rows remain unchanged.
+
+Only anchors with a complete future horizon are labeled. Training and evaluation use 15-minute anchors after a 60-minute warmup, while live inference can update every five minutes. The event threshold and prediction horizon belong to the trained model bundle and should be changed through retraining.
+
+### Known limitations
+
+- No external clinical validation or prospective patient study.
+- No demonstrated improvement in health outcomes.
+- No demonstrated performance gain from historical personalization in this seeded experiment.
+- No validated patient-level uncertainty intervals.
+- No subgroup fairness evaluation.
+- No production authentication or multi-user synchronization.
+- No alert episode deduplication or cooldown evaluation.
+- No mechanistic modeling of medication, meal absorption, or exercise physiology.
+- No validated causal explanations or clinical intervention simulation.
+
+These limitations define the current scope of the project and the work needed before any consideration of clinical use.
+
+##  Getting Started
+
+### Requirements
+
+- Python 3.11 or 3.12.
+- Git.
+- Internet access for the initial dependency installation.
+
+The application runs locally after dependencies have been installed. No API keys, cloud services, or external accounts are required.
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_PUBLIC_GITHUB_REPOSITORY_URL
+cd YOUR_REPOSITORY_NAME
+```
+
+Replace the placeholders with the actual public repository URL and directory name.
+
+### 2. Create and activate a virtual environment
+
+**Windows PowerShell**
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux**
+
 ```bash
 python -m venv .venv
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-# macOS/Linux: source .venv/bin/activate
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 python -m pip install -r requirements.txt
+```
+
+### 4. Launch the application
+
+```bash
 python -m streamlit run app.py
 ```
-The supplied package contains generated data and the trained model. Open http://localhost:8501. No keys, cloud services, or accounts are needed. Only load the trusted bundled joblib model: pickle-based formats can execute code.
 
-### Reproduce the experiment
+Open [http://localhost:8501](http://localhost:8501) in your browser.
+
+The supplied package contains generated sensor data and the trained model, allowing you to inspect the application without retraining first.
+
+**Security note:** Only load the trusted bundled `artifacts/model.joblib` file. Joblib and other pickle-based formats can execute code when deserialized.
+
+##  Reproduce the Experiment
+
+Stop the running Streamlit process before retraining. Restart it afterwards to clear cached model and data resources.
+
 ```bash
-# Stop Streamlit before retraining. Restart it afterwards to clear cached resources.
 python -m glucotwin.train --patients 160 --days 7 --seed 2026 --threshold 180 --horizon 120
 python -m pytest -q
 python scripts/build_submission.py
 ```
-On systems with too many BLAS/OpenMP workers, set `OMP_NUM_THREADS=2` and `OPENBLAS_NUM_THREADS=2`. First dependency installation needs internet. App execution is local afterwards. Python 3.12.14 was used for the executed run. Direct dependency versions are pinned; `environment-lock.txt` records the tested environment. Exact float results can vary slightly across platforms.
 
-### What works
-- 160 persistent synthetic patient profiles, each with seven days of 5-minute sensor observations.
-- Fusion of historical EHR-like characteristics and strictly past/current sensor features.
-- A trained scikit-learn histogram gradient boosting event classifier, rule baseline, and dynamic-only ablation.
-- Four disjoint patient partitions: 88 training, 24 validation, 24 calibration, 24 test.
-- Deterministic Start/Resume, Pause, Reset, 5-minute Step and 1-hour Advance controls.
-- Per-patient session state, changing predictions and persistent SQLite audit records.
-- Seven dashboard pages, missing-data withholding, model sensitivity, scenario edits and exports.
-- Genuine held-out metrics, reliability diagram, PR curve, and confusion matrix.
+The training command regenerates the synthetic experiment and rebuilds the trained artifacts. The test suite checks temporal feature isolation, exact target boundaries, missing-data withholding, disjoint patient partitions, replay state, and dashboard integration.
 
-### Prediction contract
-At time t, predict whether **any available simulated CGM value exceeds 180 mg/dL at t+5,...,t+120 minutes**. No duration criterion. The current reading is excluded from the label. An already-elevated current reading is allowed; therefore the main task includes persistence of existing excursions as well as new excursions. A separate below-threshold-at-t subset is reported to avoid overstating early warning.
+For environments affected by excessive BLAS/OpenMP worker creation, set the following variables before training:
 
-Only anchors with a complete future horizon are labeled. This conservatively excludes missing future values even when an observed positive might already establish an event. Training/evaluation uses 15-minute anchors after a 60-minute warmup. Live inference can run every 5 minutes; evaluation metrics apply to the 15-minute sampling protocol. Threshold and horizon belong to the trained bundle. Change them through retraining, not a cosmetic dashboard slider.
-
-### Executed results: synthetic held-out patients
-| Model | Precision | Recall | F1 | Average precision (PR-AUC) | Brier |
-|---|---:|---:|---:|---:|---:|
-| Fused EHR + sensor model | 0.8727 | 0.8188 | 0.8449 | 0.9498 | 0.0695 |
-| Glucose + positive trend rule | 0.7232 | 0.5540 | 0.6274 | 0.5621 | 0.2383 |
-| Dynamic-only ablation | 0.8831 | 0.8138 | 0.8470 | 0.9508 | 0.0693 |
-
-11,567 test windows; prevalence 36.21%. Fused confusion matrix: TN 6,879, FP 500, FN 759, TP 3,429. False-positive rate 6.78%; 4.32 false-positive **windows** per 100 evaluated windows. These are correlated windows, not distinct alert episodes. No confidence intervals or significance claims are made.
-
-Below-threshold subset: 9,696 windows, F1 0.7447, recall 0.7000, average precision 0.8678. The dynamic-only model slightly outperformed fusion on this seed: **no demonstrated personalization improvement**. Raw Brier was 0.06867 versus 0.06952 after calibration: calibration did not improve this test score. Brier measures more than calibration alone. Read `artifacts/metrics.json` for the source of every result and exact partition IDs.
-
-### Why this is a digital twin
-A persistent synthetic identity joins baseline history to a timestamped stream. The twin maintains its current position, causal rolling features, latest observation, data-quality state, prediction and prediction history. Each arrival rebuilds features from the available prefix and calls the trained model. Switching patients restores separate session states. SQLite persists issued estimates across app restarts; replay cursor state itself is session-local. Reset clears replay state, not the audit database. Future observations only appear in an explicitly labeled retrospective view.
-
-This is a **data-driven monitoring twin**, not a mechanistic physiological twin or a validated intervention simulator. It uses a shared population model conditioned on patient history and personal deviations; it does not fit an individual patient's future data.
-
-### Architecture and files
-```text
-app.py                     Streamlit application
-  glucotwin/data.py        Seeded EHR and sensor generator
-  glucotwin/features.py    Shared causal feature and target construction
-  glucotwin/train.py       Partition, train, calibrate, evaluate, export
-  glucotwin/twin.py        Replay state, model calls, SQLite audit
-  data/patients.csv        Historical synthetic profiles
-  data/sensors/*.csv.gz    Separate patient timelines
-  artifacts/model.joblib  Trained estimator + calibration + configuration
-  artifacts/metrics.json  Evaluation and partition manifest
-  artifacts/test_predictions.csv  Recomputable test outcomes
-  docs/                   Methodology, data dictionary, demo script, PDFs
-  tests/                  Temporal isolation, state, labels, UI integration
+```bash
+OMP_NUM_THREADS=2
+OPENBLAS_NUM_THREADS=2
 ```
 
-The separately delivered `GLUCOTWIN_DEMO.mp4` is a 23m 53s edited screen walkthrough using actual app captures and synthesized narration. Its script and chapter list are in this package. It is not an uninterrupted live recording.
+Direct dependency versions are pinned, and `environment-lock.txt` records the tested environment. Minor floating-point differences may occur across platforms.
 
-See `docs/ARCHITECTURE.pdf`, `docs/GLUCOTWIN_PRESENTATION.pdf`, `docs/METHODOLOGY.md`, `docs/DATA_DICTIONARY.md`, `docs/MODEL_CARD.md`, and `docs/DEMO_SCRIPT.md`.
+Optional screenshot and video-production tools are not required to run the application. The bundled demo is an edited walkthrough using actual application captures and synthesized narration, rather than an uninterrupted live recording.
 
-### Dashboard tour
-1. **Executive Overview:** latest synthetic observation, estimate, time and quality.
-2. **Patient Profile:** EHR-like record with historical provenance.
-3. **Live Digital Twin:** Start/Resume, Pause, Step, Advance, Reset and state inspector. A shaded future area means the classification horizon, not a glucose forecast.
-4. **Risk and Explainability:** median-replacement local sensitivity, not SHAP or causation.
-5. **Scenario Simulator:** edit only a copied input prefix; compare estimates or see withholding.
-6. **Model Performance:** test metrics, dynamic-only comparison, PR and calibration curves.
-7. **Prediction Log:** persistent audit, CSV export and opt-in retrospective ground truth.
+## 📁 Repository Structure
 
-### Team and submission
-Project/Team Name: GlucoTwin (Registered as Team MeowMeow). Participants: J K Raj Vamshi Thakur from the Indian Institute of Information Technology, Allahabad (B.Tech ECE, 2023–2027), and Swasti Mishra from IIT Dhanbad (ECE). No additional teammates, mentors, or incubator affiliations are claimed. Participants must verify eligibility and affiliation wording before submission.
-The repository is GitHub-compatible. This package does not claim a public repository or video link has been published. Follow `docs/SUBMISSION_CHECKLIST.md` for the remaining external publication steps. Keep the generated artifacts alongside code so judges can run the demo immediately.
+```text
+.
+├── app.py
+├── glucotwin/
+│   ├── data.py
+│   ├── features.py
+│   ├── train.py
+│   └── twin.py
+├── data/
+│   ├── patients.csv
+│   └── sensors/
+├── artifacts/
+│   ├── model.joblib
+│   ├── metrics.json
+│   └── test_predictions.csv
+├── docs/
+│   ├── images/
+│   │   ├── 01-executive-overview.png
+│   │   ├── 02-patient-profile.png
+│   │   ├── 03-live-digital-twin.png
+│   │   ├── 04-explainability.png
+│   │   ├── 05-scenario-simulator.png
+│   │   ├── 06-model-performance.png
+│   │   ├── 07-prediction-log.png
+│   ├── ARCHITECTURE.pdf
+│   ├── GLUCOTWIN_PRESENTATION.pdf
+│   ├── METHODOLOGY.md
+│   ├── DATA_DICTIONARY.md
+│   ├── MODEL_CARD.md
+│   ├── DEMO_SCRIPT.md
+│   └── SUBMISSION_CHECKLIST.md
+├── scripts/
+├── tests/
+├── requirements.txt
+├── environment-lock.txt
+├── LICENSE
+└── THIRD_PARTY.md
+```
 
-### License and integrity
-Project code, documentation and newly generated synthetic data: MIT (`LICENSE`). Third-party dependencies retain their own licenses (`THIRD_PARTY.md`). No patient records, real identities, proprietary datasets or trained clinical models were used. Synthetic generation rules are assumptions and cannot support real-world efficacy claims. No medication changes or clinical actions are recommended.
+The exact file layout may contain additional implementation and testing files. Keep the generated artifacts alongside the source code so reviewers can inspect the supplied experiment immediately.
 
-### Optional demonstration asset regeneration
-`python scripts/build_submission.py` regenerates the PDFs. Browser captures use `scripts/capture_demo.py` and optional Playwright 1.55.0 plus its Chromium install. The edited narrated MP4 is delivered separately to keep the source archive small. To rebuild it on Linux, use `scripts/build_video.py` with Pillow, DejaVu Sans fonts, ffmpeg with the `flite` filter, and ffprobe. These optional production tools are not needed to run the app. The demo captures were inspected at 1440×1000; the produced video has a 1600×1200 frame and audible synthetic narration. Review whether edited captures and synthetic narration satisfy the competition's current video policy before submission.
+##  Team and Affiliation
+
+**Project name:** GlucoTwin  
+**Registered team name:** Team MeowMeow
+
+| Participant | Institution | Academic program |
+|---|---|---|
+| J K Raj Vamshi Thakur | Indian Institute of Information Technology, Allahabad | B.Tech, Electronics and Communication Engineering, 2023–2027 |
+| Swasti Mishra | IIT (ISM) Dhanbad | B.Tech, Electronics and Communication Engineering, 2027 |
+
+No additional teammates, mentors, or incubator affiliations are claimed here. Please verify the official team registration and institutional wording before submission.
+
+##  License and Third-Party Components
+
+Project code, documentation, and newly generated synthetic data are released under the [MIT License](LICENSE).
+
+Third-party dependencies remain subject to their respective licenses, documented in [`THIRD_PARTY.md`](THIRD_PARTY.md).
+
+No real patient records, real patient identities, proprietary patient datasets, or trained clinical models were used in this experiment.
+
+##  Final Note
+
+GlucoTwin demonstrates how a continuously updating, patient-conditioned prediction system can combine historical context with a time-evolving sensor stream while retaining explicit temporal safeguards, inspectable model behavior, missing-data handling, held-out evaluation, and persistent auditing.
+
+Its strongest contribution is not a claim that synthetic predictions are clinically accurate. It is the integration of these engineering and experimental components into a reproducible research prototype.
+
+The next step would be independent evaluation using appropriately governed real-world data, prospective validation, and a rigorous investigation of whether historical personalization provides reliable value beyond recent sensor observations.
+
+**GlucoTwin — a reproducible digital-twin research prototype, built to make every prediction inspectable.**
