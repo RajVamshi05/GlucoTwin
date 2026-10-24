@@ -17,7 +17,7 @@ The project brings together a complete experimental pipeline: synthetic patient 
 
 | Resource | Description |
 |---|---|
-|  **Demo video** | [Watch the narrated application walkthrough]([YOUTUBE_VIDEO_URL](https://www.youtube.com/watch?v=yD8jaq5B5u8)) |
+|  **Demo video** | [Watch the narrated application walkthrough](https://www.youtube.com/watch?v=yD8jaq5B5u8) |
 |  **Architecture** | [Architecture diagram (PDF)](docs/ARCHITECTURE.pdf) |
 |  **Presentation** | [Project presentation (PDF)](docs/GLUCOTWIN_PRESENTATION.pdf) |
 |  **Methodology** | [Experimental methodology](docs/METHODOLOGY.md) |
