@@ -3,6 +3,8 @@
 
 **From reactive glucose monitoring to predictive, data-driven health research.**
 
+Open [GlucoTwin](https://glucotwin-ly6zwtonpno3y9bhx6bxqe.streamlit.app/) in your browser.
+
 GlucoTwin is a research prototype that combines historical patient context with an evolving stream of continuous glucose monitoring (CGM) observations to estimate the probability of a defined glucose event within the next two hours.
 
 Rather than presenting a static risk score, GlucoTwin maintains a timestamped patient state, updates its features as new observations arrive, evaluates a trained machine-learning model, exposes model sensitivity, handles missing sensor data, and records predictions in a persistent audit log.
@@ -17,6 +19,7 @@ The project brings together a complete experimental pipeline: synthetic patient 
 
 | Resource | Description |
 |---|---|
+|  **Application deployed link** | [Try GlucoTwin yourself!](https://glucotwin-ly6zwtonpno3y9bhx6bxqe.streamlit.app/) |
 |  **Demo video (24 minute walkthrough)** | [Watch the narrated application walkthrough](https://www.youtube.com/watch?v=yD8jaq5B5u8) |
 |  **Architecture** | [Architecture diagram (PDF)](docs/ARCHITECTURE.pdf) |
 |  **Presentation** | [Project presentation (PDF)](docs/GLUCOTWIN_PRESENTATION.pdf) |
